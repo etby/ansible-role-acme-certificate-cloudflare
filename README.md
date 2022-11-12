@@ -48,7 +48,7 @@ See the [https://raw.githubusercontent.com/nephelaiio/ansible-role-requirements/
     acme_certificate_cf_account_email: ci@nephelai.io
     acme_certificate_cf_account_token: xxxxxxxxxx
   roles:
-    - role: nephelaiio.acme-certificate-cloudflare
+    - role: nephelaiio.acme_certificate_cloudflare
 
 ## Testing
 

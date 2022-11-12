@@ -85,7 +85,7 @@
         zone: "{{ acme_certificate_zone }}"
         type: TXT
         state: present
-        record: "{{ acme_certificate_challenge.challenge_data[acme_certificate_domain]['dns-01']['resource'] }}.{{ acme_certificate_domain }}"
+        record: "{{ acme_certificate_challenge.challenge_data[acme_certificate_domain]['dns-01']['record'] }}"
         value: '"{{ acme_certificate_challenge.challenge_data[acme_certificate_domain]["dns-01"]["resource_value"] }}"'
         ttl: "{{ acme_certificate_challenge_ttl }}"
         account_email: "{{ acme_certificate_cf_account_email }}"
@@ -116,7 +116,7 @@
         zone: "{{ acme_certificate_zone }}"
         type: TXT
         state: absent
-        record: "{{ acme_certificate_challenge.challenge_data[acme_certificate_domain]['dns-01']['resource'] }}.{{ acme_certificate_domain }}"
+        record: "{{ acme_certificate_challenge.challenge_data[acme_certificate_domain]['dns-01']['record'] }}"
         value: '"{{ acme_certificate_challenge.challenge_data[acme_certificate_domain]["dns-01"]["resource_value"] }}"'
         ttl: "{{ acme_certificate_challenge_ttl }}"
         account_email: "{{ acme_certificate_cf_account_email }}"
